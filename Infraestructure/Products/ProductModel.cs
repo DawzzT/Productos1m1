@@ -117,6 +117,10 @@ namespace Infraestructure.Products
             return index <= 0 ? null : productos[index];
         }
 
+        public Product[] g()
+{}
+    
+
 
         #endregion
     }
