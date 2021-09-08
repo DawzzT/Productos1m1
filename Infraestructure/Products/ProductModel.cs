@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -117,10 +118,66 @@ namespace Infraestructure.Products
             return index <= 0 ? null : productos[index];
         }
 
-        public Product[] g()
-{}
-    
+        public Product[] GetProductByUnidadMedida(MeasurementUnit m)
+        {
+            Product[] tmp = null;
+            if (productos == null)
+            {
+                return tmp;
+            }
+            foreach(Product p in productos)
+            {
+                if (p.Unit == m)
+                {
+                    Add(p, ref tmp);
+                }
+            }
 
+            return tmp;
+        }
+
+        public Product[] GetProductByCaducity(DateTime dt)
+        {
+            Product[] tmp = null;
+            if (productos == null)
+            {
+                return tmp;
+            }
+            foreach (Product p in productos)
+            {
+                if (p.CaducityDate.CompareTo(dt) <=0)
+                {
+                    Add(p, ref tmp);
+                }
+            }
+
+            return tmp;
+        }
+
+        public Product[] GetProductByPriceRange(decimal min, decimal max)
+        {
+            Product[] tmp = null;
+            if (productos == null)
+            {
+                return tmp;
+            }
+            foreach (Product p in productos)
+            {
+                if (p.Price >= min && p.Price <= max)
+                {
+                    Add(p, ref tmp);
+                }
+            }
+
+            return tmp;
+        }
+
+        public Product[] GetProductByPrice()
+        {
+            Array.Sort(productos, new Product.ProductPriceCompare());
+
+            return productos;
+        }
 
         #endregion
     }
