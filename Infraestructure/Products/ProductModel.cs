@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -179,6 +180,15 @@ namespace Infraestructure.Products
             return productos;
         }
 
+        public string GetProductosAsJson()
+        {
+            return JsonConvert.SerializeObject(productos);
+        }
+
+        public int GetLastProductoId()
+        {
+            return productos == null ? 0 : productos[productos.Length - 1].Id;
+        }
         #endregion
     }
 }

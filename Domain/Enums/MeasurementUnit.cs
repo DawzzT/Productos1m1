@@ -11,6 +11,6 @@ namespace Domain.Enums
         Mililiters,
         Kilograms,
         Grams,
-
+        Pounds
     }
 }
