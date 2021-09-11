@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Infraestructure.Products
 {
-    class ProductModel
+    public class ProductModel
     {
         private Product[] productos;
 
