@@ -44,7 +44,7 @@ namespace TareaProductos.Forms
             this.nudMax = new System.Windows.Forms.NumericUpDown();
             this.pnlCaducity = new System.Windows.Forms.Panel();
             this.dtpCaducity = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbView = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlId.SuspendLayout();
             this.pnlByMeasurement.SuspendLayout();
@@ -93,6 +93,7 @@ namespace TareaProductos.Forms
             this.btnNew.TabIndex = 2;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // cmbUnit
             // 
@@ -200,20 +201,20 @@ namespace TareaProductos.Forms
             this.dtpCaducity.Size = new System.Drawing.Size(307, 20);
             this.dtpCaducity.TabIndex = 0;
             // 
-            // richTextBox1
+            // rtbView
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 38);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(757, 350);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.rtbView.Location = new System.Drawing.Point(12, 38);
+            this.rtbView.Name = "rtbView";
+            this.rtbView.Size = new System.Drawing.Size(757, 350);
+            this.rtbView.TabIndex = 9;
+            this.rtbView.Text = "";
             // 
             // FrmProductManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 450);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbView);
             this.Controls.Add(this.pnlId);
             this.Controls.Add(this.pnlPriceRange);
             this.Controls.Add(this.pnlCaducity);
@@ -252,6 +253,6 @@ namespace TareaProductos.Forms
         private System.Windows.Forms.NumericUpDown nudMin;
         private System.Windows.Forms.Panel pnlCaducity;
         private System.Windows.Forms.DateTimePicker dtpCaducity;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbView;
     }
 }

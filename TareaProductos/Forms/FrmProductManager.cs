@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infraestructure.Products;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace TareaProductos.Forms
 {
     public partial class FrmProductManager : Form
     {
+        public ProductModel productoModel;
         public FrmProductManager()
         {
+            productoModel = new ProductModel();
             InitializeComponent();
         }
 
@@ -51,6 +54,18 @@ namespace TareaProductos.Forms
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            FrmProduct frmProducto = new FrmProduct();
+            frmProducto.PModel = productoModel;
+            frmProducto.ShowDialog();
+            if (productoModel.GetAll() != null)
+            {
+                rtbView.Text = productoModel.GetProductosAsJson();
+            }
             
         }
     }
