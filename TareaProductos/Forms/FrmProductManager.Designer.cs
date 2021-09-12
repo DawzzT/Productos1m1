@@ -206,9 +206,11 @@ namespace TareaProductos.Forms
             // 
             this.rtbView.Location = new System.Drawing.Point(12, 38);
             this.rtbView.Name = "rtbView";
+            this.rtbView.ReadOnly = true;
             this.rtbView.Size = new System.Drawing.Size(757, 350);
             this.rtbView.TabIndex = 9;
-            this.rtbView.Text = "w";
+            this.rtbView.Text = "";
+            this.rtbView.TextChanged += new System.EventHandler(this.rtbView_TextChanged);
             // 
             // FrmProductManager
             // 

@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace TareaProductos.Forms
 {
-    public partial class FrmId : Form
+    public partial class FrmDelete : Form
     {
         public ProductModel PModel { get; set; }
 
-        public FrmId()
+        public FrmDelete()
         {
             InitializeComponent();
         }
@@ -24,7 +24,6 @@ namespace TareaProductos.Forms
         private void btnAccept_Click(object sender, EventArgs e)
         {
             int x = (int)nudID.Value;
-            MessageBox.Show($@"{x}");
             Product p = PModel.GetProductById(x);
             PModel.Delete(p);
 

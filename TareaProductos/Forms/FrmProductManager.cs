@@ -59,6 +59,8 @@ namespace TareaProductos.Forms
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            rtbView.Text = string.Empty;
+
             FrmProduct frmProducto = new FrmProduct();
             frmProducto.PModel = productoModel;
             frmProducto.ShowDialog();
@@ -71,10 +73,25 @@ namespace TareaProductos.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmId frmId = new FrmId();
+            rtbView.Text = string.Empty;
+            FrmDelete frmId = new FrmDelete();
             frmId.PModel = productoModel;
             frmId.ShowDialog();
            
+            if (productoModel.GetAll() != null)
+            {
+                rtbView.Text = productoModel.GetProductosAsJson();
+            }
+        }
+
+        private void rtbView_TextChanged(object sender, EventArgs e)
+        {
+
+            rtbView.Text = string.Empty;
+            FrmModify frmMod = new FrmModify();
+            frmMod.PModel = productoModel;
+            frmMod.ShowDialog();
+
             if (productoModel.GetAll() != null)
             {
                 rtbView.Text = productoModel.GetProductosAsJson();

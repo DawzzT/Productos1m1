@@ -1,7 +1,7 @@
 ﻿
 namespace TareaProductos.Forms
 {
-    partial class FrmId
+    partial class FrmDelete
     {
         /// <summary>
         /// Required designer variable.
