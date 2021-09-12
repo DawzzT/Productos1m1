@@ -75,6 +75,7 @@ namespace TareaProductos.Forms
             this.button1.TabIndex = 0;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnModify
             // 
@@ -207,7 +208,7 @@ namespace TareaProductos.Forms
             this.rtbView.Name = "rtbView";
             this.rtbView.Size = new System.Drawing.Size(757, 350);
             this.rtbView.TabIndex = 9;
-            this.rtbView.Text = "";
+            this.rtbView.Text = "w";
             // 
             // FrmProductManager
             // 

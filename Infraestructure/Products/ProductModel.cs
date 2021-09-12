@@ -67,7 +67,7 @@ namespace Infraestructure.Products
 
         private int GetIndexById(int id)
         {
-            if (id <= 0)
+            if (id < 0)
             {
                 throw new ArgumentException("El Id no puede ser menor que 0");
             }
@@ -106,17 +106,16 @@ namespace Infraestructure.Products
         #endregion
 
         #region Queries
-
-
+       
         public Product GetProductById(int id)
         {
-            if (id < 0)
+            if (id <= 0)
             {
                 throw new ArgumentException($"El id {id} no es valido");
             }
             int index = GetIndexById(id);
            
-            return index <= 0 ? null : productos[index];
+            return index < 0 ? null : productos[index];
         }
 
         public Product[] GetProductByUnidadMedida(MeasurementUnit m)

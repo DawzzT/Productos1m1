@@ -68,5 +68,17 @@ namespace TareaProductos.Forms
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmId frmId = new FrmId();
+            frmId.PModel = productoModel;
+            frmId.ShowDialog();
+           
+            if (productoModel.GetAll() != null)
+            {
+                rtbView.Text = productoModel.GetProductosAsJson();
+            }
+        }
     }
 }
