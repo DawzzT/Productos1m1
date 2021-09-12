@@ -289,7 +289,7 @@ namespace TareaProductos.Forms
             this.Controls.Add(this.btnAccept);
             this.Name = "FrmModify";
             this.Text = "FrmModify";
-            this.Load += new System.EventHandler(this.FrmModify_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

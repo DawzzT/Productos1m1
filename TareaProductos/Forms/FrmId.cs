@@ -14,7 +14,7 @@ namespace TareaProductos.Forms
 {
     public partial class FrmDelete : Form
     {
-        public ProductModel PModel { get; set; }
+        public ProductModel PModel2 { get; set; }
 
         public FrmDelete()
         {
@@ -24,8 +24,8 @@ namespace TareaProductos.Forms
         private void btnAccept_Click(object sender, EventArgs e)
         {
             int x = (int)nudID.Value;
-            Product p = PModel.GetProductById(x);
-            PModel.Delete(p);
+            Product p = PModel2.GetProductById(x);
+            PModel2.Delete(p);
 
             Dispose();
         }

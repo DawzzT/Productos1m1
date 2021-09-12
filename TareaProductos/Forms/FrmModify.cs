@@ -15,7 +15,7 @@ namespace TareaProductos.Forms
 {
     public partial class FrmModify : Form
     {
-        public ProductModel PModel { get; set; }
+        public ProductModel PModel3 { get; set; }
         public FrmModify()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace TareaProductos.Forms
         private void btnAccept_Click(object sender, EventArgs e)
         {
             int x = (int)nudID.Value;
-            Product prd = PModel.GetProductById(x);
+            Product prd = PModel3.GetProductById(x);
             if (prd != null)
             {
                 groupBox1.Visible = true;
@@ -44,15 +44,10 @@ namespace TareaProductos.Forms
 
         }
 
-        private void FrmModify_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnOk_Click(object sender, EventArgs e)
         {
             int x = (int)nudID.Value;
-            Product prd = PModel.GetProductById(x);
+            Product prd = PModel3.GetProductById(x);
             Product p = new Product()
             {
                 Id = prd.Id,
@@ -64,7 +59,7 @@ namespace TareaProductos.Forms
                 Unit = (MeasurementUnit)cmbMeasurement.SelectedIndex
             };
 
-            PModel.Update(p);
+            PModel3.Update(p);
 
         }
 

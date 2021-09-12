@@ -34,7 +34,6 @@ namespace TareaProductos.Forms
             this.btnModify = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.cmbUnit = new System.Windows.Forms.ComboBox();
-            this.txtById = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pnlId = new System.Windows.Forms.Panel();
             this.pnlByMeasurement = new System.Windows.Forms.Panel();
@@ -45,6 +44,7 @@ namespace TareaProductos.Forms
             this.pnlCaducity = new System.Windows.Forms.Panel();
             this.dtpCaducity = new System.Windows.Forms.DateTimePicker();
             this.rtbView = new System.Windows.Forms.RichTextBox();
+            this.nudID = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlId.SuspendLayout();
             this.pnlByMeasurement.SuspendLayout();
@@ -52,6 +52,7 @@ namespace TareaProductos.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMax)).BeginInit();
             this.pnlCaducity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -85,6 +86,7 @@ namespace TareaProductos.Forms
             this.btnModify.TabIndex = 1;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnNew
             // 
@@ -112,13 +114,6 @@ namespace TareaProductos.Forms
             this.cmbUnit.Size = new System.Drawing.Size(376, 21);
             this.cmbUnit.TabIndex = 1;
             // 
-            // txtById
-            // 
-            this.txtById.Location = new System.Drawing.Point(0, 3);
-            this.txtById.Name = "txtById";
-            this.txtById.Size = new System.Drawing.Size(410, 20);
-            this.txtById.TabIndex = 2;
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(669, 5);
@@ -131,7 +126,7 @@ namespace TareaProductos.Forms
             // 
             // pnlId
             // 
-            this.pnlId.Controls.Add(this.txtById);
+            this.pnlId.Controls.Add(this.nudID);
             this.pnlId.Location = new System.Drawing.Point(224, 9);
             this.pnlId.Name = "pnlId";
             this.pnlId.Size = new System.Drawing.Size(439, 26);
@@ -212,6 +207,13 @@ namespace TareaProductos.Forms
             this.rtbView.Text = "";
             this.rtbView.TextChanged += new System.EventHandler(this.rtbView_TextChanged);
             // 
+            // nudID
+            // 
+            this.nudID.Location = new System.Drawing.Point(0, 3);
+            this.nudID.Name = "nudID";
+            this.nudID.Size = new System.Drawing.Size(307, 20);
+            this.nudID.TabIndex = 0;
+            // 
             // FrmProductManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,12 +231,12 @@ namespace TareaProductos.Forms
             this.Text = "FrmProductManager";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.pnlId.ResumeLayout(false);
-            this.pnlId.PerformLayout();
             this.pnlByMeasurement.ResumeLayout(false);
             this.pnlPriceRange.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMax)).EndInit();
             this.pnlCaducity.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,7 +248,6 @@ namespace TareaProductos.Forms
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.ComboBox cmbUnit;
-        private System.Windows.Forms.TextBox txtById;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel pnlId;
         private System.Windows.Forms.Panel pnlByMeasurement;
@@ -257,5 +258,6 @@ namespace TareaProductos.Forms
         private System.Windows.Forms.Panel pnlCaducity;
         private System.Windows.Forms.DateTimePicker dtpCaducity;
         private System.Windows.Forms.RichTextBox rtbView;
+        private System.Windows.Forms.NumericUpDown nudID;
     }
 }

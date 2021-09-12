@@ -188,6 +188,21 @@ namespace Infraestructure.Products
         {
             return productos == null ? 0 : productos[productos.Length - 1].Id;
         }
+
+        public string GetProductosAsString(Product[] prd)
+        {
+           
+            string result = "";
+
+            foreach(Product p in prd)
+            {
+                result +=  "-Codigo: " + p.Id.ToString() + "   Nombre: " + p.Name.ToString() +
+                              "   Cantidad: " + p.Quantity.ToString() + "   Precio: " +p.Price.ToString() +
+                              "   Caducidad " + p.CaducityDate.ToString() + "   Unidad de Medida: " +p.Unit.ToString() + "\n";
+               
+            }
+            return result;
+        }
         #endregion
     }
 }
